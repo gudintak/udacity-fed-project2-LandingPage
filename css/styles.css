@@ -12,7 +12,6 @@ body {
   background: rgb(136, 203, 171);
   background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
   margin: 0;
-  padding-top: 13%;
   font-family: 'Merriweather', serif;
   color: #fff;
 }
@@ -61,47 +60,13 @@ section {
 /* ---- Module Rules ---- */
 /* Navigation Styles*/
 .navbar__menu ul {
-  float: right;
-  padding-top: 10px;
   padding-left: 0;
   margin: 0;
   text-align: right;
-  text-decoration: none;
-  list-style: none;
 }
 
-.home {
-  float: left;
-  padding-top: 10px;
-  padding-left: 0;
-  margin-left: 10px;
-  text-align: right;
-  text-decoration: none;
-  list-style: none;
-  font-family: 'Fira Sans', sans-serif;
-  color: white;
-  font-size: 50px;
-}
-
-.page__header {
-  background-color: rgba(0, 13, 60, 1);
-}
-
-.home:hover {
-  color: #cc1;
-}
-
-.navbar__menu ul li a {
-  color: white;
-  padding-top: 10px;
-  text-decoration: none;
-  padding-right: 20px;
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 25px;
-}
-
-.navbar__menu ul li a:hover {
-  color: #cc1;
+.navbar__menu li {
+  display: inline-block;
 }
 
 .navbar__menu .menu__link {
@@ -112,27 +77,15 @@ section {
   color: #000;
 }
 
-.navbar__menu .menu__link {
+.navbar__menu .menu__link:hover {
   background: #333;
   color: #fff;
   transition: ease 0.3s all;
 }
 
-.navbar .navbar-toggler .navbar-toggler.open-navbar-toggle {
-  display: none;
-  color: transparent;
-}
-
-button {
-  display: none;
-}
-
-.navbar__menu.scroll a.current {
-  color: #cc1;
-}
-
 /* Header Styles */
 .page__header {
+  background: #fff;
   position: fixed;
   top: 0;
   width: 100%;
@@ -160,7 +113,7 @@ button {
 @media only screen and (min-width: 35em) {
   .landing__container {
     max-width: 50em;
-    padding: 7em;
+    padding: 4em;
   }
 }
 
@@ -168,7 +121,6 @@ section:nth-of-type(even) .landing__container {
   margin-right: 0;
   margin-left: auto;
   text-align: right;
-  height: 100vh;
 }
 
 /* Background Circles */
@@ -259,68 +211,3 @@ section.your-active-class .landing__container::after {
     transform: rotate(360deg) translate(-1em) rotate(-360deg);
   }
 }
-
-@media(max-width: 991px) {
-  .navbar__menu ul {
-    padding: 25px 10px;
-  }
-
-  .navbar__menu ul li a {
-    min-width: 100px;
-    padding: 15px 20px;
-  }
-}
-
-@media(max-width: 767px) {
-  .navbar__menu {
-    padding 0;
-    background-color: rgba(0, 13, 60, 1);
-    height: 60px;
-  }
-
-
-  .navbar__menu ul {
-    width: 100%;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0, 0.9);
-    height: auto;
-    max-height: 0;
-    overflow: hidden;
-    transition: all ease-in-out 0.1s;
-  }
-
-  .navbar__menu ul.open {
-    max-height: 100vh;
-  }
-
-  .navbar_menu ul li {
-    width: 100%;
-  }
-
-  .navbar__menu ul li a {
-    padding: 7% 9% 4% 50%;
-    display: block;
-    background-color: rgba(0, 13, 60, 1);
-  }
-
-  .navbar__menu .navbar-toggler {
-    display: block;
-    position: absolute;
-    height: 40px;
-    top: 10px;
-    right: 20px;
-    outline: none;
-    padding: 0 5px;
-    cursor: pointer;
-  }
-
-  .navbar__menu .navbar-toggler span,
-  .navbar__menu .navbar-toggler span::before,
-  .navbar__menu .navbar-toggler span::after {
-    display: block;
-    content: '';
-    background-color: #fff;
-    height: 3px;
-    width: 28px;
-    transition: all ease-in-out 0.1s;
-  }
