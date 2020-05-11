@@ -13,12 +13,16 @@ for (section of sections) {
 console.log(ph);
 navbar__list.innerHTML = ph;
 
-$(document).ready(function(){
 
-   $("div").mouseenter(function(){
-   	 var id = $(this).attr('id');
-   	 $('a').removeClass('active');
-   	 $("[href=#"+id+"]").addClass('active');
-   });
+//This part of the code will pick the highlighted section and will add a class active
+$(document).ready(function() {
+  $("section").mouseenter(function() {
+    var id = $(this).attr('id');
+    //this will log section1 or section2 or something like that
+    console.log(id)
+    console.log($('a'))
+    $('a').removeClass('active');
+    $("[href=\"#" + id + "\"]").addClass('active');
 
+  });
 });
