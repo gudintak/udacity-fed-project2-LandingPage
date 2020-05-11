@@ -1,6 +1,6 @@
 # udacity-fed-project2-LandingPage
 
-<p>All the points of the rubric are satisfied with this commit.</p> <br><br>
+<p>All the points of the rubric are satisfied with this commit.</p> <br>
 
 <ol>
 <li>Navigation is built dynamically as an unordered list.</li>
